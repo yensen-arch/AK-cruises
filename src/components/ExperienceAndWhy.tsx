@@ -1,23 +1,23 @@
 import { Card, CardContent } from "@/components/ui/card";
 
 const experiences = [{
-  title: "Exclusive Access & Expert Guides",
-  description: "Each expedition is led by an expert team of naturalists, historians, and photographers—bringing depth and insight to every destination.",
+  title: "Curated Cultural Exploration",
+  description: "Immerse in culturally rich voyages with immersive experiences crafted by Abercrombie & Kent's global travel experts.",
   color: "bg-blue-50 text-blue-600",
   image: "https://res.cloudinary.com/dqh2tacov/image/upload/v1734684533/cld-sample-4.jpg"
 }, {
-  title: "Remote Wonders & Unparalleled Scenery",
-  description: "From polar ice to volcanic isles, experience the wild beauty of untouched locations with A&K’s purpose-built luxury vessels.",
+  title: "Unrivaled Personal Service",
+  description: "Travel in style with attentive, intuitive service from one of the world’s most respected luxury travel brands.",
   color: "bg-rose-50 text-rose-600",
   image: "https://res.cloudinary.com/dqh2tacov/image/upload/v1734684532/samples/cup-on-a-table.jpg"
 }, {
-  title: "Curated Itineraries with Purpose",
-  description: "Every voyage is designed with conservation and cultural respect in mind, ensuring meaningful, sustainable travel.",
+  title: "Small Ships, Big Access",
+  description: "Sail to remote ports and UNESCO sites on elegantly appointed small ships built for immersive exploration.",
   color: "bg-amber-50 text-amber-600",
   image: "https://res.cloudinary.com/dqh2tacov/image/upload/v1734684530/samples/balloons.jpg"
 }, {
-  title: "Luxurious Expedition Cruising",
-  description: "Enjoy fine dining, spacious suites, and personalized service aboard small ships designed for comfort and discovery.",
+  title: "World-Class Enrichment",
+  description: "Enhance your journey with expert-led talks and onboard programs that deepen your connection to each destination.",
   color: "bg-emerald-50 text-emerald-600",
   image: "https://res.cloudinary.com/dqh2tacov/image/upload/v1734684526/samples/landscapes/beach-boat.jpg"
 }];
@@ -68,7 +68,7 @@ const ExperienceAndWhy = () => {
           <div className="w-24 h-1 bg-viking-gold mx-auto"></div>
         </div>
 
-        {/* Viking River Cruises Section */}
+        {/* A&K Cruises Section */}
         <div className="mb-24">
           <div className="mb-12 flex justify-center border-2 border-viking-gold py-4">
             <img
