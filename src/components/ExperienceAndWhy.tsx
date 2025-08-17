@@ -1,4 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { CruiseLine } from "@/lib/cruise-data";
+
+interface ExperienceAndWhyProps {
+  cruiseLine?: CruiseLine;
+}
 
 const experiences = [{
   title: "Curated Cultural Exploration",
@@ -7,7 +12,7 @@ const experiences = [{
   image: "https://res.cloudinary.com/dqh2tacov/image/upload/v1734684533/cld-sample-4.jpg"
 }, {
   title: "Unrivaled Personal Service",
-  description: "Travel in style with attentive, intuitive service from one of the world’s most respected luxury travel brands.",
+  description: "Travel in style with attentive, intuitive service from one of the world's most respected luxury travel brands.",
   color: "bg-rose-50 text-rose-600",
   image: "https://res.cloudinary.com/dqh2tacov/image/upload/v1734684532/samples/cup-on-a-table.jpg"
 }, {
@@ -56,19 +61,21 @@ const whyChooseUs = [{
   ]
 }];
 
-const ExperienceAndWhy = () => {
+const ExperienceAndWhy = ({ cruiseLine }: ExperienceAndWhyProps) => {
+  const cruiseName = cruiseLine?.name || "A&K Cruises";
+
   return (
     <section className="py-24 px-6 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* Main Heading */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-viking-navy mb-4">
-           A&K Cruises and Small Ship Travel - The Perfect Relationship
+           {cruiseName} and Small Ship Travel - The Perfect Relationship
           </h2>
           <div className="w-24 h-1 bg-viking-gold mx-auto"></div>
         </div>
 
-        {/* A&K Cruises Section */}
+        {/* Cruise Line Section */}
         <div className="mb-24">
           <div className="mb-12 flex justify-center border-2 border-viking-gold py-4">
             <img
@@ -80,7 +87,7 @@ const ExperienceAndWhy = () => {
           
           <h3 className="text-2xl font-bold text-viking-navy mb-12 flex items-center justify-center">
             <span className="inline-block w-8 h-8 rounded-full bg-viking-blue mr-3 flex items-center justify-center text-white text-sm">1</span>
-            Choose A&K Cruises For:
+            Choose {cruiseName} For:
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

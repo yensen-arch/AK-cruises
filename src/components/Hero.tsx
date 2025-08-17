@@ -1,7 +1,15 @@
 
 import ContactCTA from "./ContactCTA";
+import { CruiseLine } from "@/lib/cruise-data";
 
-const Hero = () => {
+interface HeroProps {
+  cruiseLine?: CruiseLine;
+}
+
+const Hero = ({ cruiseLine }: HeroProps) => {
+  const cruiseName = cruiseLine?.name || "A&K Cruises";
+  const siteName = cruiseLine?.slug || "ak-cruises";
+
   return (
     <section className="relative min-h-screen overflow-hidden">
       {/* Overlay with gradient */}
@@ -29,7 +37,7 @@ const Hero = () => {
           {/* Content Section - Takes up more space on larger screens */}
           <div className="lg:col-span-7 text-center lg:text-left order-2 lg:order-1">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white font-serif mb-4 sm:mb-6 leading-tight drop-shadow-md">
-            Experience the Elegance of <span className="text-viking-gold">A&K Cruises</span>
+            Experience the Elegance of <span className="text-viking-gold">{cruiseName}</span>
             </h1>
             
             <p className="text-white/95 text-base sm:text-lg md:text-xl max-w-2xl mb-6 sm:mb-8 leading-relaxed drop-shadow px-2 sm:px-0">
@@ -42,7 +50,7 @@ const Hero = () => {
             <div className="relative">
               {/* Form with ContactCTA component */}
               <div className="relative z-10">
-                <ContactCTA siteName="ak-cruises" />
+                <ContactCTA siteName={siteName} />
               </div>
             </div>
           </div>
